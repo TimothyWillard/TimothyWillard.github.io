@@ -1,19 +1,60 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for content in entry.contents %}
     <li class="list-group-item">
+      {% if content.multiple_titles %}
+        {% assign range = content.title.size | minus: 2 %}
+        {% if range >= 0 %}
+          {% for i in (0..range) %}
+            <div class="row">
+              {% if content.year[i] %}
+                {% if entry.title == 'Experience' %}
+                  <div class="col-xs-3 cl-sm-3 col-md-3 text-center" style="padding-left: 0; padding-right: 0;">
+                {% else %}
+                  <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="padding-left: 0; padding-right: 0; width: 75px;">
+                {% endif %}
+                  <table class="table-cv" style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                            {{- content.year[i] -}}
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              {% endif %}
+              {% if entry.title == 'Experience' %}
+                <div class="col-xs-9 cl-sm-9 col-md-9 mt-2 mt-md-0">
+              {% else %}
+                <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+              {% endif %}
+                {% if content.title[i] %}
+                  <h6 class="title font-weight-bold ml-1 ml-md-4" style="padding-top: 4px;">{{ content.title[i] }}</h6>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endif %}
       <div class="row">
         {% if content.year %}
           {% if entry.title == 'Experience' %}
-            <div class="col-xs-3 cl-sm-3 col-md-3 text-center">
+            <div class="col-xs-3 cl-sm-3 col-md-3 text-center" style="padding-left: 0; padding-right: 0;">
           {% else %}
-            <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
+            <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="padding-left: 0; padding-right: 0; width: 75px;">
           {% endif %}
-            <table class="table-cv">
+            <table class="table-cv" style="width: 100%;">
               <tbody>
                 <tr>
                   <td>
                     <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-                      {{- content.year -}}
+                      {% if content.multiple_titles %}
+                        {{- content.year.last -}}
+                      {% else %}
+                        {{- content.year -}}
+                      {% endif %}
                     </span>
                   </td>
                 </tr>
@@ -37,7 +78,13 @@
           <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
         {% endif %}
           {% if content.title %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4" style="padding-top: 4px;">{{ content.title }}</h6>
+            <h6 class="title font-weight-bold ml-1 ml-md-4" style="padding-top: 4px;">
+              {% if content.multiple_titles %}
+                {{- content.title.last -}}
+              {% else %}
+                {{- content.title -}}
+              {% endif %}
+            </h6>
           {% endif %}
           {% if content.department or content.institution %}
             <table class="table-cv ml-1 ml-md-4 institution">
