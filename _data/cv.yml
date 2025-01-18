@@ -5,15 +5,83 @@
       value: Timothy Willard
     - name: Location
       value: Raleigh, NC
+    - name: LinkedIn
+      links:
+        - name: timothycwillard
+          link: https://www.linkedin.com/in/timothycwillard/
+
+- title: Skills
+  type: map
+  contents:
+    - name: Programming Languages
+      value:
+        - Bash/Fish
+        - C++
+        - PHP
+        - Python
+        - R
+        - SQL
+        - Wolfram Mathematica
+    - name: Python Packages
+      value:
+        - boto3
+        - falcon
+        - flask
+        - matplotlib
+        - numpy
+        - pandas
+        - psycopg2
+        - pymysql
+        - requests
+        - scipy
+        - scrapy
+        - seaborn
+        - sklearn
+        - sqlalchemy
+    - name: R Packages
+      value:
+        - data.table
+        - DBI
+        - devtools
+        - ggplot2
+        - Matrix
+        - microbenchmark
+        - profvis
+        - RCurl
+        - RMariaDB/RMySQL
+        - RPostgreSQL
+        - shiny
+        - tidyverse
+        - testthat
+        - usethis
+    - name: Technologies
+      value:
+        - Apache Airflow
+        - Docker
+        - GitHub Actions
+        - HTCondor
+        - Linux
+        - MySQL
+        - PostgreSQL
+        - Slurm
+        - SQLite
+    - name: Tools
+      value:
+        - Confluence
+        - Git
+        - Jira
+        - LaTeX
+        - Microsoft Office
+        - SVN
+
 
 - title: Experience
   type: time_table
   contents:
     - title: IT Analyst/Programmer II
       year: April 2024 - Present
-      institution: North Carolina State University
+      institution: UNC Chapel Hill Department of Epidemiology, ACCIDDA
       location: Chapel Hill, NC
-    
     - title:
         - Software Engineer
         - Software Developer
@@ -23,12 +91,21 @@
       institution: Dean & Company Strategy Consultants
       location: McLean, VA
       multiple_titles: true
+    - title: Undergraduate Research Assistant
+      year: May 2018 - August 2020
+      institution: Kemper Research Group At North Carolina State University
+      location: Raleigh, NC
+    - title: REU Research Internship
+      year: June 2019 - August 2019
+      institution: Liu Research Group At Georgetown University
+      location: Washington, DC
 
 - title: Education
   type: time_table
   contents:
     - title: Bachelor of Science
       institution: North Carolina State University
+      location: Raleigh, NC
       year: May 2021
       description:
         - Physics, mathematics major and materials science minor.
