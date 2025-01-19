@@ -11,7 +11,7 @@
           link: https://www.linkedin.com/in/timothycwillard/
 
 - title: Skills
-  type: map
+  type: list_map
   contents:
     - name: Programming Languages
       value:
@@ -111,3 +111,8 @@
         - Physics, mathematics major and materials science minor.
         - "GPA: 3.86/4."
         - Dean's list (all semesters).
+
+- title: Publications
+  type: list
+  contents: >
+    Andrew Hankins, Timothy C. Willard, Amy Y. Liu, Makarand Paranjape; Role of defects in the sensing mechanism of CNTFET gas sensors. <i>J. Appl. Phys.</i> 28 August 2020; 128 (8): 084501. <a href="https://doi.org/10.1063/5.0014951">https://doi.org/10.1063/5.0014951</a>
