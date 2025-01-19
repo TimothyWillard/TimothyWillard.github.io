@@ -180,6 +180,12 @@
               {% endfor %}
             </div>
           {% endif %}
+          {% if content.footnote %}
+            <div class="footnote ml-1 ml-md-4">
+              <i class="fa-solid fa-info-circle iconfootnote"></i>
+              {{ content.footnote }}
+            </div>
+          {% endif %}
         </div>
       </div>
     </li>
