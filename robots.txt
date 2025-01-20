@@ -1,0 +1,1 @@
+User-agent: * Disallow: Sitemap: https://www.timothycwillard.com//sitemap.xml
