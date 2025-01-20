@@ -41,4 +41,3 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy _site --project-name=timothycwillard
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
